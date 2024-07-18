@@ -1,0 +1,16 @@
+//Colors
+:root{
+    --black: hsl(0, 0%, 0%);
+    --darkblue: hsl(210, 93.94%, 12.94%) ;
+    --midnightblue: hsl(240, 24%, 10%) ; 
+    --white: hsl(180, 100%, 99.8%);
+    --lightgray: hsl(0, 0%, 57.65%);
+    --darkgrey: hsl(0, 0%, 20%);
+    --darkteal: hsl(193, 24%, 16%);
+    --deepindigo: hsl(233, 24%, 16%); 
+
+}
+
+
+//Fonts
+@import 'https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap'; //Cabin font

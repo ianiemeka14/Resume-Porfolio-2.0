@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/img/resume_favicon.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+    <script src="js/stickynav.js" defer></script>
+    <script src="js/hamburger.js" defer></script>
+    <script src="js/typedScript.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Resume</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar" class="flex flex-jc-sb flex-ai-c">
+            <div class="nav-logo">
+                <h2><a href="index.html">IA</a></h2>
+            </div>
+            <ul id="nav-menu" class="flex flex-jc-se flex-ai-c">
+                <li class="nav-item"><a href="bio.html" class="nav-link">Bio</a></li>
+                <li class="nav-item"><a href="resume.html" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <div id="contact">
+        <h1>Contact Me</h1>
+        <div id="contact-container"
+         >
+          <div class="form_container">
+            <iframe
+              name="dummyframe"
+              id="dummyframe"
+              style="display: none"
+            ></iframe>
+            <form
+              id="formId"
+              action="sendEmail.php"
+              onsubmit="return validateForm()"
+              method="POST"
+              target="dummyframe"
+            >
+              <div class="input-group">
+                <label>Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  onkeyup="validateName()"
+                />
+                <span id="name_error"></span>
+              </div>
+  
+              <div class="input-group">
+                <label>Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  onkeyup="validateEmail()"
+                />
+                <span id="email_error"></span>
+              </div>
+  
+              <div class="input-group">
+                <label>Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  onkeyup="validateSubject()"
+                />
+                <span id="subject_error"></span>
+              </div>
+  
+              <div class="input-group">
+                <label>Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  style="height: 170px"
+                  onkeyup="validateMsg()"
+                ></textarea>
+                <span id="msg_error"></span>
+              </div>
+              <input type="submit" id="submit_btn" value="SEND MESSAGE" />
+              <span id="submit_error"></span>
+              <span id="message_sent"></span>
+  
+              <script src="js/validationForm.js"></script>
+            </form>
+          </div>
+  
+          <div class="contact_me">
+            <p class="contact_header">Contact Info</p>
+            <div>
+              <span class="contact_info"
+                ><i id="loc_icon" class="fa-sharp-duotone fa-solid fa-location-dot"></i>
+                <p>63 Berriman St. #2 Brooklyn, NY 11208</p>
+              </span>
+              <span class="contact_info"
+                ><i id="phone_icon" class="fa-solid fa-mobile"></i>
+                <a href="tel:+1(347)-972-5150">
+                  <p class="phone_num">+1(347)-972-5150</p>
+                </a>
+              </span>
+              <span class="contact_info"
+                ><i id="phone_icon" class="fa-solid fa-phone"></i>
+                <a href="tel:+1(718)-235-1199">
+                  <p class="phone_num">+1(718)-235-1199</p>
+                </a>
+              </span>
+              <span class="contact_info"
+                ><i id="email_icon" class="fa-solid fa-envelope"></i>
+                <a href="mailto:isaiah.aniemeka@gmail.com">
+                  <p class="email_address">isaiah.aniemeka@gmail.com</p>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <footer>
+        <div class="footer-content">
+            <div class="socials">
+              <h2>About</h2>
+              <div class="about-summary">
+                <p class="summary">
+                  Highly motivated software developer learning and improving my
+                  skills in software development. Searching for a professional role
+                  where I can learn from experienced members. Eager to work in an
+                  environment willing to train and provide me with the necessary
+                  tools to succeed.
+                </p>
+              </div>
+    
+              <p>Connect</p>
+              <div class="social-list">
+                <span>
+                  <a href="https://github.com/ianiemeka14" target="_blank">
+                    <img class="social-icon" src="media/img/github_icon_40.png" />
+                  </a>
+                </span>
+                <span>
+                  <a
+                    href="https://www.linkedin.com/in/isaiahcaniemeka/"
+                    target="_blank"
+                  >
+                    <img class="social-icon" src="media/img/linkedin_icon.png" />
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div>
+              <h2>Links</h2>
+              <div>
+                <span class="contact-info">
+                  <ul>
+                    <span class="contact-info">
+                      <li>
+                        <a href="#container" class="nav-link"
+                          >Home</a
+                        >
+                      </li>
+                    </span>
+                    <span class="contact-info">
+                      <li>
+                        <a href="#bio" class="nav-link">Bio</a>
+                      </li>
+                    </span>
+                    <span class="contact-info">
+                      <li>
+                        <a href="#resume" class="nav-link">Resume</a>
+                      </li>
+                    </span>
+                    <span class="contact_info">
+                      <li>
+                        <a href="#projects" class="nav-link"
+                          >Projects</a
+                        >
+                      </li>
+                    </span>
+                    <span class="contact-info">
+                      <li>
+                        <a href="#contact" class="nav-link"
+                          >Contact</a
+                        >
+                      </li>
+                    </span>
+                  </ul>
+                </span>
+              </div>
+            </div>
+            <div>
+              <h2>Services</h2>
+              <div>
+                <span class="contact-info">
+                  <ul>
+                    <span class="contact-info">
+                      <li><a>Web Design</a></li>
+                    </span>
+                    <span class="contact-info">
+                      <li><a>HTML</a></li>
+                    </span>
+                    <span class="contact-info">
+                      <li><a>CSS3</a></li>
+                    </span>
+    
+                    <span class="contact-info">
+                      <li><a>Frontend</a></li>
+                    </span>
+                  </ul>
+                </span>
+              </div>
+            </div>
+            <div>
+              <h2>Have Questions?</h2>
+              <div>
+                <span class="contact-info">
+                  <p>63 Berriman St. #2 Brooklyn, NY 11208</p>
+                </span>
+                <span class="contact-info">
+                  <a href="tel:+1(347)-972-5150">
+                    <p class="phone_num">+1(347)-972-5150</p>
+                  </a>
+                </span>
+                <span class="contact-info">
+                  <a href="tel:+1(718)-235-1199">
+                    <p class="phone_num">+1(718)-235-1199</p>
+                  </a>
+                </span>
+                <span class="contact-info">
+                  <a href="mailto:isaiah.aniemeka@gmail.com">
+                    <p class="email_address">isaiah.aniemeka@gmail.com</p>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="copyright">
+            Copyright &copy;2023 All rights reserved | This website was made by
+            Isaiah C. Aniemeka
+          </div>
+    </footer>
+</body>
+</html>
