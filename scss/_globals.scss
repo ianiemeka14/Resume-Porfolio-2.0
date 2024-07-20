@@ -13,6 +13,7 @@
 
 html,body{
   animation: transitionIn 0.75s;
+  overflow-x: hidden;
 }
 
 
@@ -91,14 +92,14 @@ nav{
 #hero{
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0, 1) 100%), url('../media/img/bg_img2.jpg');
     background-size: cover;
-    padding: 10rem 0 10rem 0;
+    padding: 15rem 0 15rem 0;
 }
 
 #hero-content{
    color: var(--white);
    gap: 40px;
    padding: 8px 5%;
-   animation: fadeIn ease 3s; 
+   animation: fadeIn ease 3s;
 }
 
 
@@ -137,7 +138,7 @@ nav{
 .btn{
 	font-size: 15px;
 	background: var(--white);
-	border: var(--white) 1px solid;
+	border: var(--white) 2px solid;
 	text-decoration: none;
 	padding: 10px 40px;
 	z-index: 1;
@@ -293,7 +294,7 @@ nav{
     font-size: 16px;
     font-weight: bold;
     background: var(--white);
-    border: var(--blue) 1px solid;
+    border: var(--white) 2px solid;
     text-decoration: none;
     padding: 10px 40px;
     cursor: pointer;
@@ -492,15 +493,20 @@ nav{
 }
 */
 
+#project-container{
+  display: none;
+}
+
 .project-container{
   position: relative;
   top: 50%;
   left: 50%;
-  margin-top: 24rem;
+  margin: 24rem 0 -10rem  0;
   transform: translate(-50%, -50%);
   width: 1000px;
   height: 600px;
 }
+
 
 .project-container .slide .item{
     width: 200px;
@@ -512,8 +518,10 @@ nav{
     background-position: 50% 50%;
     background-size: cover;
     display: inline-block;
-    transition: 0.5s;
+    transition: 0.5s;   
 }
+
+
 
 .slide .item:nth-child(1),
 .slide .item:nth-child(2){
@@ -545,12 +553,12 @@ nav{
 
 
 .item .content{
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 100px;
     width: 300px;
     text-align: left;
-    color: #eee;
+    color: var(--white);
     transform: translate(0, -50%);
     font-family: system-ui;
     display: none;
@@ -599,18 +607,14 @@ nav{
   border: none;
   cursor: pointer;
   margin: 0 5px;
-  border: 1px solid #000;
+  border: 1px solid var(--black);
   transition: 0.3s;
 }
 
 .button button:hover{
-  background: #ababab;
-  color: #fff;
+  background: var(--lightgray);
+  color: var(--white);
 }
-
-
-
-
 
 
 
@@ -674,7 +678,8 @@ input[type="submit"] {
   border-radius: 1;
   cursor: pointer;
   transition: 0.5s;
-  width: 100%
+  width: 100%;
+  border: 2px solid var(--white);
 }
 
 input[type="submit"]:hover {
@@ -763,6 +768,7 @@ footer {
     padding: 50px 0 50px 0;
     height: 100;
     background-color: var(--black);
+    border-top: 1px solid var(--darkgray);
   }
   
   footer h2 {
@@ -884,19 +890,14 @@ footer {
       right: -100%;
       top: 0rem;
       flex-direction: column;
-      background-color: var(--lightgray);
-      width: 70%;
+      background-color: var(--black);
+      width: 100%;
       height: 100%;
-      border-radius: 1px;
       transition: 0.3s; 
   }
 
  #nav-menu.active{
       right: 0;
-  }
-
-  .nav-item{
-      margin: 1.5rem 0;
   }
 
   .hamburger{
@@ -921,7 +922,7 @@ footer {
       text-align: center;
       margin: auto; 
       width: 100%;
-      height: 100vh;
+      height: 100%;
   }
   
   #hero-content{
@@ -946,7 +947,7 @@ footer {
 
 
 #hero-content p{
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   width: 100%;
 }
@@ -955,7 +956,7 @@ footer {
   display: inline-block;
   letter-spacing: 2px;
   color: var(--white);
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   width: fit-content !important;
 }
@@ -1004,35 +1005,100 @@ footer {
   #resume-container .fa-solid{
       display: none;
   }
- 
+
+  .project-container{
+   display: none;
+  }
+
+  #project-container {
+    display: block;
+    padding: 50px;
+    flex-direction: column;
+  }
   
+  
+  .project1 {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .project2 {
+    position: relative;
+    width: 100%;
+    margin-bottom: -6rem;
+  }
+  
+  .project_img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: black;
+  }
+  
+  .project1:hover .overlay {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  .project2:hover .overlay {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  .git_link {
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .github_logo {
+    width: 100%;
+  }
+ 
   
   #contact{
       padding: 30px;
   }
   
   .form_container{
-      padding: 90px 0 40px 0;
-      width: 90%;    
+      padding: 40px;
+      margin-bottom: 50px;
+      width: 100%;    
   }
   
   
-  .contact-container {
+  #contact-container {
       flex-direction: column;
-      padding-bottom: 0%;
   }
   
-  .contact-info{ 
-      color: var(--gray);  
+  #contact-container .contact-info{ 
+      color: var(--white);  
   }
   
-  .contact-info p:hover{
-      color: var(--white);
+  #contact-container .contact-info p:hover{
+      color: var(--lightgray);
   }
   
-  .contact-header{
+  #contact-container .contact-header{
       font-size: 20px;
-      padding-bottom: 20px;
   }
   
   .footer-content{

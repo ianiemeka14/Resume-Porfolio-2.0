@@ -7,6 +7,19 @@ hamburger.addEventListener("click", openMenu);
 navLink.forEach(n => n.addEventListener('click', closeMenu));
 
 
+hamburger.addEventListener("click", () => {
+    const menuOpen = navMenu.classList.contains('active'); // Assuming you toggle an 'active' class
+  
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'; // Disable scrolling
+    } else {
+      document.body.style.overflow = 'auto'; // Enable scrolling
+    }
+});
+
+
+
+
 function openMenu(){
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
