@@ -80,8 +80,6 @@ function validateForm() {
   setTimeout(function () {
     submit.style.display = "block";
   }, 4000);
-  
-  form.reset();
 
   return true;
   
