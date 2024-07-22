@@ -47,6 +47,7 @@
               onsubmit="return validateForm()"
               method="POST"
               target="dummyframe"
+              autocomplete="off"
             >
               <div class="input-group">
                 <label>Full Name</label>
@@ -55,6 +56,7 @@
                   id="name"
                   name="name"
                   onkeyup="validateName()"
+                  required
                 />
                 <span id="name_error"></span>
               </div>
@@ -66,6 +68,7 @@
                   id="email"
                   name="email"
                   onkeyup="validateEmail()"
+                  required
                 />
                 <span id="email_error"></span>
               </div>
@@ -76,7 +79,6 @@
                   type="text"
                   id="subject"
                   name="subject"
-                  onkeyup="validateSubject()"
                 />
                 <span id="subject_error"></span>
               </div>
@@ -88,6 +90,7 @@
                   name="message"
                   style="height: 170px"
                   onkeyup="validateMsg()"
+                  required
                 ></textarea>
                 <span id="msg_error"></span>
               </div>
@@ -166,31 +169,31 @@
                   <ul>
                     <span class="contact-info">
                       <li>
-                        <a href="#container" class="nav-link"
+                        <a href="index.html" class="nav-link"
                           >Home</a
                         >
                       </li>
                     </span>
                     <span class="contact-info">
                       <li>
-                        <a href="#bio" class="nav-link">Bio</a>
+                        <a href="bio.html" class="nav-link">Bio</a>
                       </li>
                     </span>
                     <span class="contact-info">
                       <li>
-                        <a href="#resume" class="nav-link">Resume</a>
+                        <a href="resume.html" class="nav-link">Resume</a>
                       </li>
                     </span>
                     <span class="contact_info">
                       <li>
-                        <a href="#projects" class="nav-link"
+                        <a href="projects.html" class="nav-link"
                           >Projects</a
                         >
                       </li>
                     </span>
                     <span class="contact-info">
                       <li>
-                        <a href="#contact" class="nav-link"
+                        <a href="contact.html" class="nav-link"
                           >Contact</a
                         >
                       </li>

@@ -63,7 +63,7 @@ function validateMsg() {
   return true;
 }
 function validateForm() {
-  if ((!validateName(), !validateEmail(), !validateSubject(), !validateMsg())) {
+  if ((!validateName(), !validateEmail(), !validateMsg())) {
     submitError.innerHTML = "please fix error to submit";
     setTimeout(function () {
       submitError.style.display = "none";
