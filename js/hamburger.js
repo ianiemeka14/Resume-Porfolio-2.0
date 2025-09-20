@@ -1,11 +1,11 @@
-let hamburger = document.querySelector('.hamburger');
-let navMenu = document.getElementById('nav-menu');
-let navLink = document.querySelectorAll('.nav-link');
+var hamburger = document.querySelector('.hamburger');
+var navMenu = document.getElementById('nav-menu');
+var navLink = document.querySelectorAll('.nav-link');
 
 
 
 hamburger.addEventListener("click", () => {
-    openMenu();
+   toggleMenu();
 
     let menuOpen = hamburger.classList.contains('active'); // Assuming you toggle an 'active' class
   
@@ -19,7 +19,7 @@ hamburger.addEventListener("click", () => {
 navLink.forEach(n => n.addEventListener('click', closeMenu));
 
 
-function openMenu(){
+function toggleMenu(){
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
 }
@@ -28,15 +28,14 @@ function openMenu(){
 function closeMenu(){
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
+    document.body.style.overflow = 'auto';
 }
 
-
-document.onclick = function(e){
-    if(e.target != navMenu && e.target.parentNode !==  hamburger){
-        closeMenu();
-        document.body.style.overflow= 'auto';
-    }
-
-}
+document.addEventListener('click', (e) => {
+  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    closeMenu();
+    document.body.style.overflow = 'auto';
+  }
+});
 
 
