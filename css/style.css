@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 
-html, body {
+html, body{
     background-color: var(--black);
     height: 100%;
 }
@@ -98,6 +98,10 @@ nav {
   gap: 40px;
   padding: 8px 5%;
   animation: fadeIn ease 3s;
+}
+
+#hero-content button {
+  flex-shrink: 0;
 }
 
 #hero-content h1 {
@@ -1045,6 +1049,10 @@ footer .copyright {
 
    .info_btn button{
     margin: 0 0 20px 0;
+  }
+
+  html, body{
+    
   }
 }
 
