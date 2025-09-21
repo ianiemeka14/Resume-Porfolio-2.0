@@ -823,7 +823,7 @@ footer .contact_info:hover {
 footer .copyright {
   text-align: center;
   color: var(--lightgray);
-  margin: 30vh 0vh 5vh 0;
+  padding: 30vh 0 40px 0;
 }
 
 .flex {
