@@ -1,0 +1,44 @@
+# ------------------------------
+# Enable Rewrite Engine
+# ------------------------------
+RewriteEngine On
+
+# ------------------------------
+# Force HTTPS
+# ------------------------------
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ------------------------------
+# Remove .html extension from URLs
+# ------------------------------
+
+# Redirect any request with .html in the URL to extensionless URL
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Internally serve .html file when extension is missing
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
+
+# ------------------------------
+# Custom error pages
+# ------------------------------
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
+ErrorDocument 500 /500.html
+
+# ------------------------------
+# Cache static files for performance
+# ------------------------------
+<FilesMatch "\.(jpg|jpeg|png|gif|svg|webp|ico|css|js|pdf|woff|woff2|ttf|eot)$">
+    Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+
+# ------------------------------
+# Enable Gzip compression if available
+# ------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
