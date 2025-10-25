@@ -90,7 +90,7 @@ nav {
   background-size: cover;
   padding: 15rem 0 15rem 0;
   overflow: hidden;
-  border-bottom: 1px solid var(--darkgray);
+  
 }
 
 #hero-content {
@@ -696,38 +696,44 @@ input:-webkit-autofill:active {
 }
 
 .input-group {
-  width: 100%;
-  align-items: center;
-  position: relative;
+    position: relative;
+    margin-bottom: 24px;
 }
 
 .input-group span {
-  position: absolute;
-  bottom: 28px;
-  right: 17px;
-  font-size: 14px;
-  color: red;
-  font-family: sans-serif;
-  text-transform: lowercase;
+    position: absolute;
+    bottom: 28px;
+    right: 17px;
+    font-size: 14px;
+    color: red; /* default for error messages */
+    font-family: sans-serif;
+    text-transform: lowercase;
 }
 
-.fa-solid .fa-circle-check {
-  color: var(--white) !important;
+/* Keep the check icon white as in your original code */
+.input-group span i.fa-circle-check {
+    color: var(--white) !important;
 }
 
+/* Form submission messages */
 #submit_error {
-  color: red;
-  font-family: sans-serif;
-  text-transform: capitalize;
+    color: red;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    display: block;
+    margin-top: 10px;
 }
 
 #message_sent {
-  color: var(--white);
+    color: var(--white);
+    font-family: sans-serif;
+    display: none;
+    margin-top: 10px;
 }
 
-.contact_info {
+#contact .contact_info {
   display: flex;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   gap: 10px;
   color: var(--white);
 }
@@ -746,6 +752,7 @@ input:-webkit-autofill:active {
 footer {
   padding: 50px 0px 0px 0px;
   background-color: var(--black);
+  border-top: 1px solid var(--darkgray);
 }
 
 footer h2 {
@@ -811,19 +818,19 @@ footer ul li a:hover {
   color: var(--white);
 }
 
-footer .contact_info {
-  padding-bottom: 5px;
+footer .contact-info {
+  padding-bottom: 15px;
   color: var(--lightgray);
 }
 
-footer .contact_info:hover {
+footer .contact-info:hover {
   color: var(--white);
 }
 
 footer .copyright {
   text-align: center;
   color: var(--lightgray);
-  padding: 30vh 0 40px 0;
+  padding: 30rem 0 40px 0;
 }
 
 .flex {
@@ -959,16 +966,12 @@ footer .copyright {
     padding: 50px;
     flex-direction: column;
   }
-  .project1 {
+  .project{
     position: relative;
     width: 100%;
     margin-bottom: 30px;
   }
-  .project2 {
-    position: relative;
-    width: 100%;
-    margin-bottom: -6rem;
-  }
+  
   .project_img {
     display: block;
     width: 100%;
@@ -986,14 +989,11 @@ footer .copyright {
     transition: 0.5s ease;
     background-color: black;
   }
-  .project1:hover .overlay {
+  .project:hover .overlay {
     cursor: pointer;
     opacity: 0.8;
   }
-  .project2:hover .overlay {
-    cursor: pointer;
-    opacity: 0.8;
-  }
+  
   .git_link {
     color: var(--white);
     position: absolute;
