@@ -828,9 +828,11 @@ footer .contact-info:hover {
 }
 
 footer .copyright {
+  width: 100%;
+  max-width: auto;
   text-align: center;
   color: var(--lightgray);
-  padding: 30rem 0 40px 0;
+  margin: 15rem 0 40px 0;
 }
 
 .flex {
@@ -1041,6 +1043,15 @@ footer .copyright {
   }
 }
 
+@media screen and (max-width: 768px) {
+  footer .copyright {
+    font-size: 0.85rem;
+    padding: 2rem 1rem;
+    margin: 15rem 0 40px 0;
+  }
+}
+
+
 
 @media screen and (max-width: 450px) {
   #hero-content p {
@@ -1051,7 +1062,13 @@ footer .copyright {
     margin: 0 0 20px 0;
   }
 
+footer .copyright {
+    font-size: 0.8rem;
+    padding: 1.5rem 0.5rem;
+  }
+  
 }
+
 
 /*ANIMATIONS*/
 @keyframes transitionIn {
